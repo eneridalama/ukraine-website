@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/contribute.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="/javascript/script.js" defer></script>
+    <script src="/javascript/validation.js" defer></script>
+    <script src="/javascript/drag-and-drop.js" defer></script>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+    <title>Ukraine - Contribute</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="nav__container">
+            <a href="index.html" id="navbar__logo">
+                <img src="/images/name.png" alt="Ukraine's logo" width="50px" style="margin-right: 20px;">
+                <span class="logo-letter">U</span>
+                <span class="logo-letter">K</span>
+                <span class="logo-letter">R</span>
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">I</span>
+                <span class="logo-letter">N</span>
+                <span class="logo-letter">E</span>
+            </a>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="identification.html" class="navbar__links" id="about-page">IDENTIFICATION</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="history.html" class="navbar__links" id="team-page">HISTORY</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="culture.html" class="navbar__links" id="services-paeg">CULTURE</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="visit.html" class="navbar__links" id="services-paeg">VISIT</a>
+                </li>
+
+            </ul>
+
+            <a href="contribute.html" class="button" id="navbar__btn">CONTRIBUTE</a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="contribute">
+        <div class="contribute__container">
+            <div>
+                <h3>HELP UKRAINE RECOVER FROM THE WAR</h3>
+                <p>Support Ukraine from any country in the world. Where to donate to help Ukraine right now.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form name="signUp" id="signup" class="form" method="POST" enctype="multipart/form-data">
+            <h1>Sign Up & Donate</h1>
+            <div class="form-field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" autocomplete="off" tabindex="1">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" autocomplete="off" tabindex="2">
+                <small></small>
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-45-678" >
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <p>Please select your gender:</p>
+                <input type="radio"  name="gender" class="gender" value="female"  tabindex="3" >
+                <label for="female">Female</label><br>
+                <input type="radio" name="gender" class="gender" value="male" tabindex="4">
+                <label for="male">Male</label><br> <br>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="country">Select Your Country:</label>
+                <select id="country" name="country"  tabindex="5">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="albania">Albania</option>
+                    <option value="italy">Italy</option>
+                    <option value="england">England</option>
+                    <option value="france">France</option>
+                    <option value="spain">Spain</option>
+                </select>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="review">Additional notes:</label> <br>
+                <textarea id="review" name="review" rows="4" cols="50" tabindex="6"></textarea>
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="fieldset">Upload files that will help the war: </label>
+                <fieldset tabindex="7">
+
+                    <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+
+                    <div>
+                        <label for="fileselect">Files to upload:</label>
+                        <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                        <div id="filedrag">or drop files here</div>
+                    </div>
+
+                    <div id="submitbutton">
+                        <button type="submit">Upload Files</button>
+                    </div>
+
+                </fieldset>
+                <div id="messages">
+                    <p>Status Messages</p>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" autocomplete="off" tabindex="8">
+                    <small></small>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" name="confirm-password" id="confirm-password" autocomplete="off" tabindex="9">
+                    <small></small>
+                </div>
+
+                <div class="form-field">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="SIGN UP & DONATE">
+                </div>
+        </form>
+    </div>
+
+    <div id="body"></div>
+
+
+    <!-- <div class="form">
+        <form id="form">
+            <div class="form-field" success>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name"  >
+                <small></small>
+             </div>
+            
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name" value="Last Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com" value="example@gmail.com" required>
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="albania">Albania</option>
+                <option value="italy">Italy</option>
+                <option value="england">England</option>
+                <option value="france">France</option>
+                <option value="spain">Spain</option>
+            </select>
+
+
+            <p>Please select your gender:</p>
+            <input type="radio" id="female" name="gender" value="female" required="required">
+            <label for="female">Female</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br> <br>
+
+
+            <label for="review">Additional notes:</label> <br>
+
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+
+            <div>
+                <h3>Payment</h3>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" value="John More Doe"  required>
+                <label for="ccnum">Credit card number</label>
+                <input type="text" id="ccnum" name="cardnumber" value="1111-2222-3333-4444"  required>
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" value="September"  required>
+                <div class="row">
+                    <div>
+                        <label for="expyear">Exp Year</label>
+                        <input type="text" id="expyear" name="expyear" value="2018"  required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" name="cvv" maxlength="3" required>
+                    </div> <br>
+        
+                    <div>
+                        <label for="value">Value</label>
+                        <input type="number" id="value" value="5000"  required>
+                    </div> <br>
+
+                </div>
+            </div>
+
+            <input type="submit"  value="DONATE" class="btn">
+        </form> -->
+
+    <!-- </div> -->
+    </div> <br>
+    <hr>
+
+    <div class="fcopy">
+        <div class="fcopy__container">
+            <p class="ftex">&copy; 2022 ukraine.com All Rights Reserved</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.history__container {
+  display: block;
+  width: 100%;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+.history__container p {
+  color: black;
+  opacity: 70%;
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  line-height: 1.6;
+}
